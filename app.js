@@ -27,7 +27,8 @@ app.get("/cadastro/:nome", function (req, res){
 })
 
 //Criando a aplicação na porta 3690
-app.listen(3690, function (erro){
+const port = process.env.PORT || 3690;
+app.listen(port, function (erro){
     if (erro){
         console.log("Erro ao iniciar");
     } else {
